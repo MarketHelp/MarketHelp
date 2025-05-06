@@ -1,0 +1,6 @@
+[submodule "MarketHelp_frontend"]
+	path = MarketHelp_frontend
+	url = https://github.com/MarketHelp/MarketHelp-frontend
+[submodule "MarketHelp_backend"]
+	path = MarketHelp_backend
+	url = https://github.com/MarketHelp/MarketHelp-backend
