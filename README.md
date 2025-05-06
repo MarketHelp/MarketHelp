@@ -61,4 +61,4 @@
 - Команда 1.2 [Git](https://github.com/progerg/Lawly) [Чеклист](https://github.com/progerg/Lawly/blob/master/documentation/checklist-2.pdf)
 - Команда 1.3 [Git](https://github.com/Aleygv/Fishing_game/tree/main) [Чеклист](https://github.com/Aleygv/Fishing_game/blob/main/Documents/%D0%A7%D0%B5%D0%BA-%D0%BB%D0%B8%D1%81%D1%82%202%D0%B9%20%D1%8D%D1%82%D0%B0%D0%BF.pdf)
 - Команда 2.1 [Git](https://github.com/2group1team/VoiceChef) [Чеклист]()
-- Команда 5.4 [Git](https://github.com/TP-Jobsy) [Чеклист]()
+- Команда 5.4 [Git](https://github.com/TP-Jobsy) [Чеклист](https://github.com/TP-Jobsy/jobsy-docs/blob/main/checklist/%D0%A7%D0%B5%D0%BA%D0%BB%D0%B8%D1%81%D1%82%202%20%D1%8D%D1%82%D0%B0%D0%BF.pdf)
