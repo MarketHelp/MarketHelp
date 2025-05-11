@@ -32,6 +32,8 @@
 ### Отчёты
 - [Отчёт ПМ](./reports/PM_Report_MVP.pdf)
 - [Отчёт за 2 аттестацию](./reports/ATT2_Report.pdf)
+    ### Недельные отчёты
+    - [Отчёт за 11.05.2025](./reports/week_reports/MarketHelp_Report_11_05_2025.pdf)
 
 ### Ссылки:
 
