@@ -1,12 +1,11 @@
-Hastebin
 openapi: 3.0.3
 info:
-  title: GraphOnText API
-  description: GraphOnText API
+  title: MarketHelp API
+  description: MarketHelp API specification
   version: 1.0.0
 
 servers:
-  - url: 'https://localhost:8080'
+  - url: "https://markethelp.minecraftslaves.duckdns.org"
 
 tags:
   - name: auth
@@ -25,7 +24,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AuthCredentials'
+              $ref: "#/components/schemas/AuthCredentials"
       responses:
         200:
           description: Authentication response
@@ -39,11 +38,11 @@ paths:
                     description: Authentication token
                     type: string
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
   /auth/register:
     post:
       operationId: register
@@ -55,7 +54,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AuthCredentials'
+              $ref: "#/components/schemas/AuthCredentials"
       responses:
         200:
           description: Authentication response
@@ -69,11 +68,11 @@ paths:
                     description: Authentication token
                     type: string
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
   /shops:
     get:
       operationId: getShops
@@ -81,7 +80,7 @@ paths:
       tags:
         - shop
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       responses:
         200:
           description: Shops response
@@ -90,39 +89,39 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Shop'
+                  $ref: "#/components/schemas/Shop"
         401:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
     post:
       operationId: createShop
       summary: Create a shop
       tags:
         - shop
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       requestBody:
-        $ref: '#/components/requestBodies/CreateShop'
+        $ref: "#/components/requestBodies/CreateShop"
       responses:
         200:
           description: Shop response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Shop'
+                $ref: "#/components/schemas/Shop"
         401:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
   /shops/{shopId}:
     delete:
       operationId: deleteShop
@@ -130,46 +129,46 @@ paths:
       tags:
         - shop
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       parameters:
-        - $ref: '#/components/parameters/ShopId'
+        - $ref: "#/components/parameters/ShopId"
       responses:
         200:
           description: Successfully deleted a shop
         401:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
     patch:
       operationId: updateShop
       summary: Update a shop
       tags:
         - shop
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       parameters:
-        - $ref: '#/components/parameters/ShopId'
+        - $ref: "#/components/parameters/ShopId"
       requestBody:
-        $ref: '#/components/requestBodies/UpdateShop'
+        $ref: "#/components/requestBodies/UpdateShop"
       responses:
         200:
           description: Shop response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Shop'
+                $ref: "#/components/schemas/Shop"
         401:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
   /shops/{shopId}/products:
     get:
       operationId: getProducts
@@ -177,9 +176,9 @@ paths:
       tags:
         - product
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       parameters:
-        - $ref: '#/components/parameters/ShopId'
+        - $ref: "#/components/parameters/ShopId"
       responses:
         200:
           description: Products response
@@ -188,15 +187,15 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Product'
+                  $ref: "#/components/schemas/Product"
         401:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
   /shops/{shopId}/products/sync:
     get:
       operationId: syncProducts
@@ -204,9 +203,9 @@ paths:
       tags:
         - product
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       parameters:
-        - $ref: '#/components/parameters/ShopId'
+        - $ref: "#/components/parameters/ShopId"
       responses:
         200:
           description: Products response
@@ -215,15 +214,15 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Product'
+                  $ref: "#/components/schemas/Product"
         401:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
   /shops/{shopId}/products/{productId}/visualizations:
     get:
       operationId: getProductVisualizations
@@ -231,10 +230,10 @@ paths:
       tags:
         - product
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       parameters:
-        - $ref: '#/components/parameters/ShopId'
-        - $ref: '#/components/parameters/ProductId'
+        - $ref: "#/components/parameters/ShopId"
+        - $ref: "#/components/parameters/ProductId"
       responses:
         200:
           description: Product visualizations response
@@ -243,27 +242,63 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/ProductVisualization'
+                  $ref: "#/components/schemas/ProductVisualization"
         401:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
     post:
       operationId: createProductVisualization
       description: Create product visualization
       tags:
         - product
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       parameters:
-        - $ref: '#/components/parameters/ShopId'
-        - $ref: '#/components/parameters/ProductId'
+        - $ref: "#/components/parameters/ShopId"
+        - $ref: "#/components/parameters/ProductId"
       requestBody:
-        $ref: '#/components/requestBodies/CreateProductVisualization'
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - format
+                - filters
+              properties:
+                format:
+                  type: string
+                  description: Visualization format
+                filters:
+                  type: object
+                  description: Visualization filters
+                  properties:
+                    categories:
+                      type: array
+                      description: Categories to filter by (quality, description, delivery, package)
+                      items:
+                        type: string
+                        enum: [quality, description, delivery, package]
+                    rating:
+                      type: array
+                      description: Ratings to filter by (values from 0 to 5)
+                      items:
+                        type: integer
+                        minimum: 0
+                        maximum: 5
+                    date_range:
+                      type: string
+                      description: Date range for filtering data
+                      enum: [week, month, half_year, year, all]
+                    mood:
+                      type: string
+                      description: Mood filter for reviews
+                      enum: [positive, negative]
       responses:
         200:
           description: Product visualization image
@@ -273,13 +308,13 @@ paths:
                 type: string
                 format: binary
         401:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
   /shops/{shopId}/products/{productId}/visualizations/{productVisualizationId}:
     get:
       operationId: getProductVisualization
@@ -287,11 +322,11 @@ paths:
       tags:
         - product
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       parameters:
-        - $ref: '#/components/parameters/ShopId'
-        - $ref: '#/components/parameters/ProductId'
-        - $ref: '#/components/parameters/ProductVisualizationId'
+        - $ref: "#/components/parameters/ShopId"
+        - $ref: "#/components/parameters/ProductId"
+        - $ref: "#/components/parameters/ProductVisualizationId"
       responses:
         200:
           description: Product visualization image
@@ -301,13 +336,13 @@ paths:
                 type: string
                 format: binary
         401:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         400:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         422:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
         500:
-          $ref: '#/components/responses/Error'
+          $ref: "#/components/responses/Error"
 
 components:
   parameters:
@@ -469,5 +504,3 @@ components:
       type: http
       scheme: bearer
       bearerFormat: JWT
-For immediate assistance, please email our customer support: support@toptal.com
-
