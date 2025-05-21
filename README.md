@@ -34,7 +34,7 @@
 - [Отчёт за 2 аттестацию](./reports/ATT2_Report.pdf)
     ### Недельные отчёты
     - [Отчёт за 11.05.2025](./reports/week_reports/MarketHelp_Report_11_05_2025.pdf)
-    - [Отчёт за 12.05.2025](./reports/week_reports/MarketHelp_Report_21_05_2025.pdf)  
+    - [Отчёт за 21.05.2025](./reports/week_reports/MarketHelp_Report_21_05_2025.pdf)  
 
 ### Ссылки:
 
