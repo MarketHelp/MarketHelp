@@ -23,11 +23,13 @@
 
 - [Техническое задание](./specification/Техническое_задание_1_команда_1_группа_.pdf)
 - [Аналитика](./specification/analytics/Аналитика.pdf)
+- [Предпроектное исследование](./specification/analytics/Предпроектное%20исследование.pdf)
 - [OpenAPI Спецификация](./specification/api/openapi.yaml)
 - [Правила введения коммитов](./specification/commits/README.md)
 - [BrandBook](./specification/design/BrandBook.pdf)
 - [Макет дизайна](./specification/design/Design.pdf)
 - [Тест план](./specification/analytics/Тест%20план.pdf)
+- [Тестирование](./reports/test_reports/backend_checks_1_0.pdf)
 
 ### Отчёты
 - [Отчёт ПМ](./reports/PM_Report_MVP.pdf)
@@ -35,6 +37,8 @@
     ### Недельные отчёты
     - [Отчёт за 11.05.2025](./reports/week_reports/MarketHelp_Report_11_05_2025.pdf)
     - [Отчёт за 21.05.2025](./reports/week_reports/MarketHelp_Report_21_05_2025.pdf)  
+    ### Отчёты по тестированию
+    - [Отчёт по тестированию](./reports/test_reports/report_backend_checks_1_0.pdf)
 
 ### Ссылки:
 
